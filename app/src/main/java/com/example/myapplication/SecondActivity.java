@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class SecondActivity extends AppCompatActivity {
 
     @Override
@@ -23,9 +27,15 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, AltaActivity.class);
-                /** Llamada a la hija con startActivityForResult() nos               *
-                 *  obliga a sobreescribir onActivityResult(), más abajo.            *
-                 *  Se podría llamar con startActivity() si la hija no devuelve nada */
+                //Ejemplo para luego tratar las fechas y sacar la edad
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                String fec = "12/03/2021";
+                try {
+                    Date fecgc = sdf.parse(fec);
+                    System.out.println(fecgc.toString());
+                } catch (ParseException e) {
+                    throw new RuntimeException(e);
+                }
 
                 startActivity(intent);
             }
