@@ -62,4 +62,17 @@ public class MainActivity extends AppCompatActivity {
         pulsaciones++;
     }
 
+    protected void onStop(){
+        super.onStop();
+    }
+
+    protected void onStart(){
+        super.onStart();
+    }
+
+    protected void onPause(){
+        super.onPause();
+    }
+
+
 }
