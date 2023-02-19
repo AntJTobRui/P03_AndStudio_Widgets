@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -18,6 +17,15 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Persona pers = (Persona) getIntent().getSerializableExtra("objPers");
+
+        if (pers != null){
+            //Comprobar datos de persona
+            System.out.println(pers.getNombre());
+            //Comprobar edad
+            int ed = Tools.calculaEdad(pers.getFecNac());
+            System.out.println("Edad: " + ed);
+        }
 
         //Creo los botones del activity_second
         Button butUno = (Button) findViewById(R.id.btnUno);

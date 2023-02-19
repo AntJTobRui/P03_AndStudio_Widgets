@@ -9,10 +9,10 @@
         android:id="@+id/textForm"
         android:layout_width="407dp"
         android:layout_height="65dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
         android:gravity="center"
         android:text="FORMULARIO"
         android:textSize="30dp"
-        android:backgroundTint="@color/cardview_shadow_end_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -23,7 +23,7 @@
     <EditText
         android:id="@+id/textNomb"
         android:layout_width="378dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:gravity="center_vertical"
         android:hint="Nombre"
         android:textSize="20dp"
@@ -32,10 +32,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textForm"
         app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/textApe"
         android:layout_width="378dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:gravity="center_vertical"
         android:hint="Apellido"
         android:textSize="20dp"
@@ -44,22 +45,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNomb"
         app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/textFecNac"
         android:layout_width="378dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:gravity="center_vertical"
-        android:hint="Fecha nacimiento"
+        android:hint="Fecha nacimiento (dd/mm/aaaa)"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textApe"
         app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/textCurso"
         android:layout_width="378dp"
-        android:layout_height="43dp"
+        android:layout_height="48dp"
         android:gravity="center_vertical"
         android:hint="Curso"
         android:textSize="20dp"
@@ -68,4 +71,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFecNac"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/butEnv"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="358dp"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/textCurso" />
+
+    <Button
+        android:id="@+id/butCancel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="358dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCurso" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="204dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
