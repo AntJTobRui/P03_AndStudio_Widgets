@@ -29,10 +29,11 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         //Creo los botones del activity_second
-        Button butUno = (Button) findViewById(R.id.btnUno);
+        Button butAlta = (Button) findViewById(R.id.btnUno);
+        Button butInfo = (Button) findViewById(R.id.btnCuatro);
 
         //Doy listeners a los botones
-        butUno.setOnClickListener(new View.OnClickListener() {
+        butAlta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, AltaActivity.class);
@@ -45,6 +46,15 @@ public class SecondActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     throw new RuntimeException(e);
                 }
+
+                startActivity(intent);
+            }
+        });
+
+        butInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SecondActivity.this, InfoActivity.class);
 
                 startActivity(intent);
             }

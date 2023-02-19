@@ -13,6 +13,9 @@
             android:name=".AltaActivity"
             android:exported="false" />
         <activity
+            android:name=".InfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity

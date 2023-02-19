@@ -13,7 +13,7 @@ public class Tools {
     public static int calculaEdad(Calendar fech){
         Calendar cal = Calendar.getInstance();
         int diferencia = cal.get(Calendar.YEAR) - fech.get(Calendar.YEAR);
-        System.out.println(cal.get(Calendar.YEAR) +"  "+ fech.get(Calendar.YEAR));
+        //System.out.println(cal.get(Calendar.YEAR) +"  "+ fech.get(Calendar.YEAR));
         // Si la diferencia de años es 0, no hay que restar nada
         // Si el año del dia de la fecha que yo paso es mayor que la actual, resto uno
         if (diferencia != 0 && (fech.get(Calendar.DAY_OF_YEAR) >= cal.get(Calendar.DAY_OF_YEAR))) {
