@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SecondActivity extends AppCompatActivity {
-
+    Persona objt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,7 @@ public class SecondActivity extends AppCompatActivity {
         Persona pers = (Persona) getIntent().getSerializableExtra("objPers");
 
         if (pers != null){
+            objt=pers;
             //Comprobar datos de persona
             System.out.println(pers.getNombre());
             //Comprobar edad
