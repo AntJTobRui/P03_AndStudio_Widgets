@@ -19,7 +19,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Persona pers = (Persona) getIntent().getSerializableExtra("objPers");
 
-        if (pers != null){
+        if (pers != null && pers.getNombre()!=null){
             objt=pers;
             //Comprobar datos de persona
             System.out.println(pers.getNombre());
@@ -56,7 +56,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SecondActivity.this, InfoActivity.class);
-
+                intent.putExtra("objPers", objt);
                 startActivity(intent);
             }
         });

@@ -43,7 +43,16 @@ public class AltaActivity extends AppCompatActivity {
                 pers.setFecNac(gc);
                 pers.setCurso(String.valueOf(edtxCur.getText()));
                 Intent intent = new Intent(AltaActivity.this, SecondActivity.class);
-                intent.putExtra("objPers", pers);
+                if (pers.getNombre()!=null && pers.getFecNac() != null && pers.getApellido() != null && pers.getCurso() != null)
+                    intent.putExtra("objPers", pers);
+                startActivity(intent);
+            }
+        });
+
+        butCan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AltaActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });
