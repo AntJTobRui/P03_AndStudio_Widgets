@@ -38,6 +38,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, AltaActivity.class);
                 //Ejemplo para luego tratar las fechas y sacar la edad
+                /*
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 String fec = "12/03/2021";
                 try {
@@ -45,7 +46,7 @@ public class SecondActivity extends AppCompatActivity {
                     System.out.println(fecgc.toString());
                 } catch (ParseException e) {
                     throw new RuntimeException(e);
-                }
+                }*/
 
                 startActivity(intent);
             }
