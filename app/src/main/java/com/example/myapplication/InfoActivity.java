@@ -33,8 +33,10 @@ public class InfoActivity extends AppCompatActivity{
         butVol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = getIntent(); //sirve?
-                //Intent intent = new Intent(InfoActivity.this, SecondActivity.class);
+                //Intent intent = getIntent(); //sirve?
+                Intent intent = new Intent(InfoActivity.this, SecondActivity.class);
+                if (pers.getNombre()!=null && pers.getFecNac() != null && pers.getApellido() != null && pers.getCurso() != null)
+                    intent.putExtra("objPers", pers);
                 startActivity(intent);
             }
         });
