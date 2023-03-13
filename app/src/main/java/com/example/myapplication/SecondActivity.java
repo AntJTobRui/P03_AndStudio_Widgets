@@ -31,23 +31,23 @@ public class SecondActivity extends AppCompatActivity {
         //Creo los botones del activity_second
         Button butAlta = (Button) findViewById(R.id.btnUno);
         Button butInfo = (Button) findViewById(R.id.btnCuatro);
+        Button butWid1 = (Button) findViewById(R.id.btnDos);
+
 
         //Doy listeners a los botones
+        butWid1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SecondActivity.this, WidUnoActivity.class);
+                intent.putExtra("objPers", objt);
+                startActivity(intent);
+            }
+        });
         butAlta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, AltaActivity.class);
-                //Ejemplo para luego tratar las fechas y sacar la edad
-                /*
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                String fec = "12/03/2021";
-                try {
-                    Date fecgc = sdf.parse(fec);
-                    System.out.println(fecgc.toString());
-                } catch (ParseException e) {
-                    throw new RuntimeException(e);
-                }*/
-
+                intent.putExtra("objPers", objt);
                 startActivity(intent);
             }
         });

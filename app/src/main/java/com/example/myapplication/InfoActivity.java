@@ -35,7 +35,7 @@ public class InfoActivity extends AppCompatActivity{
             public void onClick(View view) {
                 //Intent intent = getIntent(); //sirve?
                 Intent intent = new Intent(InfoActivity.this, SecondActivity.class);
-                if (pers.getNombre()!=null && pers.getFecNac() != null && pers.getApellido() != null && pers.getCurso() != null)
+                if (pers != null && pers.getNombre()!=null && pers.getFecNac() != null && pers.getApellido() != null && pers.getCurso() != null)
                     intent.putExtra("objPers", pers);
                 startActivity(intent);
             }

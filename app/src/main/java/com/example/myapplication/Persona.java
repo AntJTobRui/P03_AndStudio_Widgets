@@ -9,6 +9,8 @@ public class Persona implements Serializable {
     private GregorianCalendar fecNac;
     private String curso;
 
+    private boolean repite;
+
     public String getNombre() {
         return nombre;
     }
@@ -39,5 +41,13 @@ public class Persona implements Serializable {
 
     public void setCurso(String curso) {
         this.curso = curso;
+    }
+
+    public boolean isRepite() {
+        return repite;
+    }
+
+    public void setRepite(boolean repite) {
+        this.repite = repite;
     }
 }
